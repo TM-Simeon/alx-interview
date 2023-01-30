@@ -25,7 +25,7 @@ def pascal_triangle(num):
         triangle.append(list);
         return triangle;
     else:
-        for x in range(num+1):
+        for x in range(num):
             num = x;
             r = 0;
             list = [];
