@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ this module takes in a number and returns the pascal triangle for that number """
 
 def factorial(n):
