@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
-import math
 """ this module takes in a number and returns the pascal triangle for that number """
+
+def factorial(n):
+    if (n == 0 ):
+        return 1;
+    else:
+        return n * factorial(n-1);
 
 def nCr(num, re):
     """ method to create the combination """
-    factN = math.factorial(num);
-    factRe = math.factorial(re);
-    factN_re = math.factorial(num - re);
+    factN = factorial(num);
+    factRe = factorial(re);
+    factN_re = factorial(num - re);
     deno = factN_re * factRe;
     result = (factN)/(deno);
     return result;
@@ -20,7 +25,7 @@ def pascal_triangle(num):
         triangle.append(list);
         return triangle;
     else:
-        for x in range(num):
+        for x in range(num+1):
             num = x;
             r = 0;
             list = [];
